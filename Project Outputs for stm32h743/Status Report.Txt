@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [stm32h743.PrjPcb]
+   Generated File[board.TXT]
+   Generated File[board.LDP]
+   Generated File[board.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 12:19:25 On 26.06.2019
