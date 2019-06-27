@@ -1,12 +1,19 @@
-Output: NC Drill Files
-Type  : NC Drill
-From  : Project [stm32h743.PrjPcb]
-   Generated File[board.TXT]
-   Generated File[board.LDP]
-   Generated File[board.DRR]
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [stm32h743.PrjPcb]
+   Generated File[board.GTL]
+   Generated File[board.GBL]
+   Generated File[board.GTP]
+   Generated File[board.GTS]
+   Generated File[board.GBS]
+   Generated File[board.GKO]
+   Generated File[board.GM1]
+   Generated File[board.RUL]
+   Generated File[board.EXTREP]
+   Generated File[board.REP]
 
 
-Files Generated   : 3
+Files Generated   : 10
 Documents Printed : 0
 
-Finished Output Generation At 17:20:02 On 27.06.2019
+Finished Output Generation At 20:57:55 On 27.06.2019
