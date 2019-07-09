@@ -2,9 +2,9 @@ com_test\usbd_ioreq.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_
 com_test\usbd_ioreq.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 com_test\usbd_ioreq.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
 com_test\usbd_ioreq.o: ../Inc/usbd_conf.h
-com_test\usbd_ioreq.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-com_test\usbd_ioreq.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-com_test\usbd_ioreq.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+com_test\usbd_ioreq.o: I:\Program\uvision5\ARM\ARMCC\Bin\..\include\stdio.h
+com_test\usbd_ioreq.o: I:\Program\uvision5\ARM\ARMCC\Bin\..\include\stdlib.h
+com_test\usbd_ioreq.o: I:\Program\uvision5\ARM\ARMCC\Bin\..\include\string.h
 com_test\usbd_ioreq.o: ../Inc/main.h
 com_test\usbd_ioreq.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 com_test\usbd_ioreq.o: ../Inc/stm32f1xx_hal_conf.h
@@ -13,7 +13,7 @@ com_test\usbd_ioreq.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 com_test\usbd_ioreq.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 com_test\usbd_ioreq.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 com_test\usbd_ioreq.o: ../Drivers/CMSIS/Include/core_cm3.h
-com_test\usbd_ioreq.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+com_test\usbd_ioreq.o: I:\Program\uvision5\ARM\ARMCC\Bin\..\include\stdint.h
 com_test\usbd_ioreq.o: ../Drivers/CMSIS/Include/core_cmInstr.h
 com_test\usbd_ioreq.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 com_test\usbd_ioreq.o: ../Drivers/CMSIS/Include/core_cmFunc.h

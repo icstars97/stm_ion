@@ -8,6 +8,7 @@
 "com_test\usbd_cdc_if.o"
 "com_test\stm32f1xx_it.o"
 "com_test\stm32f1xx_hal_msp.o"
+"com_test\test_funcs.o"
 "com_test\stm32f1xx_hal_gpio_ex.o"
 "com_test\stm32f1xx_hal_pcd.o"
 "com_test\stm32f1xx_hal_pcd_ex.o"

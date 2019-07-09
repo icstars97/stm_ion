@@ -26,6 +26,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "usbd_cdc_if.h"
+#include "test_funcs.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,6 +48,9 @@
 
 /* USER CODE BEGIN PV */
 extern uint8_t UserRxBufferFS[1000];
+uint8_t *TestArr;
+uint16_t TestLen=0;
+uint8_t  rdy[1]={0xAA};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -91,7 +95,8 @@ int main(void)
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
-
+  
+// CDC_RxClear(&UserRxBufferFS[0],1000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -101,12 +106,40 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+		HAL_Delay(100);
 		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_SET);
-		HAL_Delay(90);
-		CDC_Transmit_FS(&UserRxBufferFS[1],UserRxBufferFS[0]);
+		switch (UserRxBufferFS[0])
+		{
+			case 0xAA: // uc ready
+				HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_RESET);
+				CDC_Transmit_FS(&rdy[0],1);
+				CDC_RxClear(&UserRxBufferFS[0],1);
+			break;
+			
+			case 0xFF:  //rewrite test data
+				HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_RESET);
+				TestLen=UserRxBufferFS[1];
+				free(TestArr);
+				Rewrite_TestArr(&UserRxBufferFS[2], TestArr, TestLen);
+				CDC_RxClear(&UserRxBufferFS[0],TestLen+2);
+			break;
+				
+			case 0xFE:  //return test data 
+				HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_RESET);
+				CDC_Transmit_FS(&TestArr[0],TestLen);
+				UserRxBufferFS[0]=0x00;
+			break;
+			
+			case 0xFD:  // concatenate test data
+				HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_RESET);
+				TestLen=Concat_TestArr(&UserRxBufferFS[2],TestArr,TestLen,UserRxBufferFS[1]);
+			  CDC_RxClear(&UserRxBufferFS[0],UserRxBufferFS[1]+2);
+			break;
+			
+		}
   }
   /* USER CODE END 3 */
-}
+}	
 
 /**
   * @brief System Clock Configuration
