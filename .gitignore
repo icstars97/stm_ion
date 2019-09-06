@@ -1,3 +1,6 @@
 /History
 /__Previews
 /Project Logs for stm32h743
+/program/uc/com_test/MDK-ARM/*.uvoptx
+/program/uc/com_test/MDK-ARM/*.uvprojx
+/program/uc/com_test/MDK-ARM/*.uvguix.*
