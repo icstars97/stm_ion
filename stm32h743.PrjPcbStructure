@@ -1,1 +1,3 @@
 Record=TopLevelDocument|FileName=main.SchDoc
+Record=SheetSymbol|SourceDocument=main.SchDoc|Designator=D1|SchDesignator=D1|FileName=device1.SchDoc|SymbolType=Normal|RawFileName=device1.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=main.SchDoc|Designator=D2|SchDesignator=D2|FileName=device1.SchDoc|SymbolType=Normal|RawFileName=device1.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
